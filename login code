@@ -1,0 +1,20 @@
+package Selenium;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class EXLOGIN {
+
+	public static void main(String[] args) {
+WebDriver driver=new EdgeDriver();
+driver.get("https://example.login.com/v4/");
+driver.findElement(By.name("uid")).sendKeys("username");
+driver.findElement(By.name("password")).sendKeys("password");
+driver.findElement(By.id("login")).click();
+//search//
+driver.findElement(By.xpath("url of search field")).sendKeys("product name");
+driver.findElement(By.xpath("url of search button")).click();
+	}
+
+}
